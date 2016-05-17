@@ -8,13 +8,12 @@ node {
    // Get the maven tool.
    // ** NOTE: This 'M3' maven tool must be configured
    // **       in the global configuration.
-   //def mvnHome = tool 'M3'
    def mvnHome= "D:\\apache-maven-3.1.1"
    env.JAVA_HOME = tool 'Java 1.8.0_77'
 
    // Mark the code build 'stage'....
    stage 'Build'
    // Run the maven build
-   bat "${mvnHome}\\bin\\mvn clean"
+   bat "${mvnHome}\\bin\\mvn clean package"
 
 }
